@@ -1,6 +1,6 @@
 [package]
 name = "re_unwrap"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Zufalige Daten <11mangu01@gmail.com>"]
 description = "An unwrap macroset for types Result<T, E> and Option<T> with several options for using alternativly to matches."
 license = "MIT"
