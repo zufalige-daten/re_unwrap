@@ -1,6 +1,6 @@
-#[cfg(not(debug_assertions))]
+#[cfg(not(feature = "debug"))]
 mod re_unwrap;
-#[cfg(debug_assertions)]
+#[cfg(feature = "debug")]
 mod re_unwrap_for_debugging;
 
 #[cfg(test)]
