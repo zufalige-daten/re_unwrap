@@ -1,4 +1,7 @@
+#[cfg(not(debug_assertions))]
 mod re_unwrap;
+#[cfg(debug_assertions)]
+mod re_unwrap_for_debugging;
 
 #[cfg(test)]
 mod tests {
