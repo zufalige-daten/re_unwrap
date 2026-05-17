@@ -20,7 +20,7 @@ macro_rules! unwrapr_ret {
     ($x:expr, $r:expr) => {
         match $x {
             Ok(q) => q,
-            Err(_) => return $r,
+            Err(e) => return $r,
         }
     };
 }
@@ -33,7 +33,7 @@ macro_rules! unwrapr_msg {
     ($x:expr, $($s:tt)*) => {
         match $x {
             Ok(q) => q,
-            Err(_) => {
+            Err(e) => {
                 eprintln!("Error: {}", format!($($s)*));
                 std::process::exit(-1);
             },
